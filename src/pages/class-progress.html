@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Class Progress</title>
+</head>
+
+<body>
+    <div class="mobile-nav r-20px">
+        <div class="item r-10px cursor-pointer" onclick="window.location='profile.html';">
+            <span> <img class="icon-mobile" src="assets/images/icons/profile-icon.png" alt="profile"></span>
+        </div>
+        <div class="item r-10px cursor-pointer " onclick="window.location='all-schedule.html';">
+            <span> <img class="icon-mobile" src="assets/images/icons/dashboard-icon-black.png" alt="dashboard"></span>
+        </div>
+        <div class="item r-10px cursor-pointer" onclick="window.location='activity.html';">
+            <span> <img class="icon-mobile" src="assets/images/icons/activity-icon-black.png" alt="activity"></span>
+        </div>
+        <div class="item r-10px cursor-pointer" onclick="window.location='chat.html';">
+            <span> <img class="icon-mobile" style="width:1em;" src="assets/images/icons/chat-bubble-icon.png"
+                    alt=""></span>
+        </div>
+        <div class="item r-10px cursor-pointer" onclick="window.location='index.html';">
+            <span><img class="icon-mobile" src="assets/images/icons/logout-icon.svg" alt="logout"></span>
+        </div>
+    </div>
+    <div class="dashboard-container">
+        <aside>
+            <div class="notification">
+                <img class="cursor-pointer" align="right" src="assets/images/icons/notification-icon.png"
+                    style="width:30px;height:30px;" alt="">
+            </div>
+            <div class="avatar-container cursor-pointer" onclick="window.location='profile.html';">
+                <img style src="assets/images/photo-profile/profile-picture.png" class="avatar-image" alt="">
+                <span class="avatar-name">Emir Kharisma</span>
+                <span class="avatar-status mt-1">Online</span>
+            </div>
+            <div class="menu-container">
+                <div class="side-link cursor-pointer" onclick="window.location='all-schedule.html';">
+                    <img style="margin-right:8px;" src="assets/images/icons/dashboard-icon.svg" alt="">
+                    Dashboard
+                </div>
+                <div class="side-link cursor-pointer active" onclick="window.location='activity.html';">
+                    <img style="margin-right:8px;" src="assets/images/icons/activity-icon-black.png" alt="">
+                    Activity
+                </div>
+                <div class="side-link cursor-pointer" onclick="window.location='help.html';">
+                    <img style="margin-right:8px;" src="assets/images/icons/help-icon.svg" alt="help">
+                    Help
+                </div>
+                <div class="side-link cursor-pointer" onclick="window.location='index.html';">
+                    <img style="margin-right:8px;" src="assets/images/icons/logout-icon.svg"
+                        class="menu-icon text-danger" alt="Logout Icon">
+                    <span class="text-danger">Logout</span>
+                </div>
+            </div>
+        </aside>
+        <div id="main-content" class="bg-transparent p-3 d-flex flex-column justify-content-start">
+            <h1 class="d-flex align-items-center">
+                <a href="activity.html">
+                    <img class="rotate-180" src="assets/images/icons/forward-icon.svg" alt="prev page">
+                </a>
+                Front-end Fundamentals
+            </h1>
+            <div class="card bg-white border-0 p-0 r-10px">
+                <div class="class-detail-cover-container">
+                    <img src="assets/images/img/class-detail-cover.png" class="class-cover-image r-top-10px"
+                        alt="Cover image">
+
+                    <div class="cover-description">
+                        <div class="category-icon-container r-10px">
+                            <img src="assets/images/icons/software-category-icon.svg" alt="software category">
+                        </div>
+                        <div class="cover-description-content">
+                            <div class="flex-grow-1">
+                                <h2 class="cover-title">Front-end Fundamentals</h2>
+                                <div class="cover-description-level">
+                                    <span>Level : Beginner</span>
+                                    <span>Category : Software</span>
+                                    <span>Price : Free</span>
+                                </div>
+                                <div class="horizontal-progress-container flex-grow-1">
+                                    <span>80% to complete</span>
+                                    <div class="horizontal-background" style="width: 100%">
+                                        <span class="horizontal-progress" style="width: 80%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-center d-none d-md-flex">
+                                <span>Your Score</span>
+                                <span class="score">86</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center d-flex d-md-none">
+                            <span>Your Score</span>
+                            <span class="score">86</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-header border-0 col-12 col-md-12 col-lg-12 p-0 mt-5 ">
+
+                </div>
+                <div class="card-body ">
+                    <div class="class-description-container class-progress-container">
+                        <div class="tab-menu-container">
+                            <div class="tab-menu cursor-pointer" onclick="window.location='class-detail.html';">
+                                Information</div>
+                            <div class="tab-menu active cursor-pointer" onclick="window.location='class-progress.html';">
+                                Class Progress</div>
+                            <div class="tab-menu">Class Discussion</div>
+                        </div>
+                        <div class="description">
+                            <div class="table-responsive mt-0">
+                                <table class="table table-borderless new-class-table progress-class-table p-1" style="border-collapse:separate;
+                                border-spacing:0 5px;">
+                                    <tbody>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox" checked=True disabled="disabled">
+                                            </th>
+                                            <td><span style="font-weight: 600;"> HTML Essential Training </span></td>
+                                            <td><span style="color: rgba(151,151,151,1);"> You have completed this topic
+                                                </span></td>
+                                            <td><span class="complete-score">100</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox" checked=True disabled="disabled">
+                                            </th>
+                                            <td><span style="font-weight: 600;">CSS Essential Training</span></td>
+                                            <td><span style="color: rgba(151,151,151,1);"> You have completed this topic
+                                                </span></td>
+                                            <td><span class="veryLow-score">42</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox" checked=True disabled="disabled">
+                                            </th>
+                                            <td><span style="font-weight: 600;">Javascript Essential Training</span>
+                                            </td>
+                                            <td><span style="color: rgba(151,151,151,1);"> You have completed this topic
+                                                </span></td>
+                                            <td><span class="veryLow-score">21</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox" checked=True disabled="disabled">
+                                            </th>
+                                            <td><span style="font-weight: 600;">Responsive Layout</span></td>
+                                            <td><span style="color: rgba(151,151,151,1);"> You have completed this topic
+                                                </span></td>
+                                            <td><span class="complete-score">98</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox" checked=True disabled="disabled">
+                                            </th>
+                                            <td><span style="font-weight: 600;">Mid-term Exam </span></td>
+                                            <td><span style="color: rgba(151,151,151,1);"> You have completed this topic
+                                                </span></td>
+                                            <td><span class="veryGood-score">86</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox" checked=True disabled="disabled">
+                                            </th>
+                                            <td><span style="font-weight: 600;">Bootstrap4 Essential Training </span>
+                                            </td>
+                                            <td><span style="color: rgba(151,151,151,1);"> You have completed this topic
+                                                </span></td>
+                                            <td><span class="medium-score">72</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox"></th>
+                                            <td><span style="font-weight: 600;">Sass Essential Training</span></td>
+                                            <td><span style="font-weight: 600;">Friday, 6 November 2020 <br>
+                                                    08.00 - 09.40</span></td>
+                                            <td><span class="score"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox"></th>
+                                            <td><span style="font-weight: 600;">Learning React.js</span></td>
+                                            <td><span style="font-weight: 600;">Friday, 13 November 2020 <br>
+                                                    08.00 - 09.40</span></td>
+                                            <td><span class="score"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox"></th>
+                                            <td><span style="font-weight: 600;">UX for Web Design</span></td>
+                                            <td><span style="font-weight: 600;">Friday, 20 November 2020 <br>
+                                                    08.00 - 09.40</span></td>
+                                            <td><span class="score"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope=" row"><input type="checkbox"></th>
+                                            <td><span style="font-weight: 600;">Final-termExam</span></td>
+                                            <td><span style="font-weight: 600;">Friday, 27 November 2020 <br>
+                                                    08.00 - 09.40</span></td>
+                                            <td><span class="score"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
