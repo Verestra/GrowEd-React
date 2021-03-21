@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
 import './assets/css/style.css';
 // import ReactDOM from 'react-dom';
 
@@ -21,14 +23,14 @@ class App extends Component {
                     <img src="images/icons/reveal-icon.svg" className="reveal-icon" alt="reveal" />
                 </div>
             </div>
-            <a className="forgot-pass float-end mt-3 mb-3" href="reset-password.html">Forgot
-                password?</a>
+            <Link to="/Reset-Password" className="forgot-pass float-end mt-3 mb-3">Forgot
+                password?</Link>
 
             <div className="d-grid gap-2 col-12 mx-auto">
-                <a href="all-schedule.html" className="btn btn-primary-color mb-2" type="button">Login</a>
-                <a href="all-schedule.html" className="btn btn-google" type="button">
+                <Link to="/All-Schedule" className="btn btn-primary-color mb-2" type="button">Login</Link>
+                <Link to="/Dashboard-Fasilitator" className="btn btn-google" type="button">
                     <img src="images/icons/google-icon.svg" alt="google" className="google-icon mx-1" />Login with google
-                </a>
+                </Link>
             <div className="new-regist">
                 <span className="new-regist-text">New user? </span> <a href="register.html">Register</a>
             </div>
