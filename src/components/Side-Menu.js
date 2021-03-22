@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
+import All_Schedule from '../pages/User/Dashboard/All-Schedule';
+import Activity from '../pages/User/Activity/Activity';
+
 
 class Side_Menu extends Component {
     render() {
@@ -9,32 +12,34 @@ class Side_Menu extends Component {
                 <div className="notification">
                     <img className="cursor-pointer" align="right" src="../images/icons/notification-icon-black.svg" alt="" />
                 </div>
-                <div className="avatar-container cursor-pointer">
+                
+                <Link to="./Profile" className="avatar-container cursor-pointer text-link">
                     <img src="../images/photo-profile/profile-picture.png" className="avatar-image" alt="" />
                     <span className="avatar-name-black">Emir Kharisma</span>
                     <span className="avatar-status=black mt-1">Online</span>
-                </div>
+                </Link>
+                
                 <div className="menu-container">
-                    <div className="side-link cursor-pointer">
+                    <Link to="./All-Schedule" className="side-link cursor-pointer text-link">
                         <img src="../images/icons/dashboard-icon.svg" alt="" />
                         Dashboard
-                    </div>
-                    <div className="side-link cursor-pointer" >
+                    </Link>
+                    <Link to="./Activity" className="side-link cursor-pointer text-link" >
                         <img src="../images/icons/activity-icon.svg" alt="" />
                         Activity
-                    </div>
-                    <div className="side-link cursor-pointer" >
+                    </Link>
+                    <Link to="./Settings" className="side-link cursor-pointer text-link">
                         <img src="../images/icons/settings-icon.png" alt="" />
                         Settings
-                    </div>
-                    <div className="side-link cursor-pointer">
+                    </Link>
+                    <Link to="./Help" className="side-link cursor-pointer text-link">
                         <img src="../images/icons/help-icon.svg" alt="help" />
                         Help
-                    </div>
-                    <div className="side-link cursor-pointer">
+                    </Link>
+                    <Link to="/" className="side-link cursor-pointer text-link">
                         <img src="../images/icons/logout-icon.svg" className="menu-icon text-danger" alt="Logout Icon" />
                         <span className="text-danger">Logout</span>
-                    </div>
+                    </Link>
                     </div>
                  </aside>
             

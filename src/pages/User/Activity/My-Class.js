@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Mobile_Nav from '../../../components/Mobile-Nav';
 import Side_Menu from '../../../components/Side-Menu';
+import { Link } from "react-router-dom";
 
 class My_Class extends Component {
     render() {
@@ -11,9 +12,9 @@ class My_Class extends Component {
                     <Side_Menu />
                     <div id="main-content" class="bg-transparent p-3 d-flex flex-column justify-content-start">
                         <h1 class="d-flex align-items-center">
-                            <a href="activity.html">
+                            <Link to="./Activity">
                                 <img class="rotate-180" src="../images/icons/forward-icon.svg" alt="prev page" />
-                            </a>
+                            </Link>
                 My Class
             </h1>
                         <div class="card bg-transparent border-0 p-0">

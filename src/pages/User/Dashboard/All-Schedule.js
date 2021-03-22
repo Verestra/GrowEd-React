@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Mobile_Nav from '../../../components/Mobile-Nav';
 import Side_Menu from '../../../components/Side-Menu';
 import Chat from '../../../components/Chat';
+import { Link } from "react-router-dom";
 
 class All_Schedule extends Component {
     render() {
@@ -59,8 +60,8 @@ class All_Schedule extends Component {
                                     </div>
                                 </div>
                                 <div className="d-flex align-items-center justify-content-center py-3 text-style">
-                                    <span className="cursor-pointer text-color" onclick="window.location='all-schedule.html';">All schedule&nbsp;</span>
-                                    <span className="cursor-pointer text-color-2" onclick="window.location='for-you.html';">For You</span>
+                                    <Link to="./All-Schedule" className="cursor-pointer text-color text-link">All schedule&nbsp;</Link>
+                                    <Link to="./For-You" className="cursor-pointer text-color-2 text-link">For You</Link>
                                 </div>
                                 <div className="hr-sect">8:00</div>
                                 <div className="date-detail">

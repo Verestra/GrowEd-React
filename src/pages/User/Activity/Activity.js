@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Mobile_Nav from '../../../components/Mobile-Nav';
 import Side_Menu from '../../../components/Side-Menu';
+import { Link } from "react-router-dom";
 
 
 class Activity extends Component {
@@ -95,8 +96,8 @@ class Activity extends Component {
                                     </tbody>
                                 </table>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <span class="view-all cursor-pointer" onclick="window.location='my-class.html';">view all
-                                        <img src="../images/icons/forward-icon.svg" width="12" height="12" alt="" /></span>
+                                    <Link to="./My-Class" class="view-all cursor-pointer">view all
+                                        <img src="../images/icons/forward-icon.svg" width="12" height="12" alt="" /></Link>
                                 </div>
                             </div>
                         </div>
@@ -137,8 +138,8 @@ class Activity extends Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="cursor-pointer" onclick="window.location='class-detail.html';">
-                                            <td>Know more Javascript</td>
+                                        <tr class="cursor-pointer">
+                                             <td><Link to="Class-Detail" className="text-link">Know more Javascript</Link> </td>
                                             <td>Software</td>
                                             <td>Javascript from the basic for...</td>
                                             <td>Beginner</td>

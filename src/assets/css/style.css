@@ -53,6 +53,11 @@ body {
   font-weight: 600;
 }
 
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .complete-course {
   color: rgba(151,151,151,1);
 }
@@ -425,9 +430,9 @@ body {
 }
 
 .dashboard-container #main-content .avatar-lg .avatar-image-lg {
-  width: 100%;
+  width: 90%;
   max-width: 400px;
-  height: auto;
+  max-height: auto;
 }
 
 .dashboard-container #main-content .avatar-lg .edit-avatar {

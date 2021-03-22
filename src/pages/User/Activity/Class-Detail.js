@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Mobile_Nav from '../../../components/Mobile-Nav';
 import Side_Menu from '../../../components/Side-Menu';
+import { Link } from "react-router-dom";
 
 class Class_Detail extends Component {
     render() {
@@ -11,9 +12,9 @@ class Class_Detail extends Component {
                     <Side_Menu />
                     <div id="main-content" class="bg-transparent p-3 d-flex flex-column justify-content-start">
                         <h1 class="d-flex align-items-center">
-                            <a href="activity.html">
+                            <Link to="./Activity">
                                 <img class="rotate-180" src="../images/icons/forward-icon.svg" alt="prev page" />
-                            </a>
+                            </Link>
                 Know more javascript
             </h1>
                         <div class="card bg-white border-0 p-0 r-10px">
@@ -48,10 +49,10 @@ class Class_Detail extends Component {
                             <div class="card-body">
                                 <div class="class-description-container">
                                     <div class="tab-menu-container">
-                                        <div class="tab-menu active cursor-pointer" onclick="window.location='class-detail.html';">
-                                            Information</div>
-                                        <div class="tab-menu cursor-pointer" onclick="window.location='class-progress.html';">Class
-                                Progress</div>
+                                        <Link to="./Class-Detail" class="tab-menu active cursor-pointer text-link">
+                                            Information</Link>
+                                        <Link to="./Class-Progress" class="tab-menu cursor-pointer text-link">Class
+                                Progress</Link>
                                         <div class="tab-menu">Class Discussion</div>
                                     </div>
                                     <div class="description">

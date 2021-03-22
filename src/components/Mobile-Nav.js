@@ -6,22 +6,22 @@ class Mobile_Nav extends Component {
         return (
             <nav>
                 <div className="mobile-nav r-20px">
-                    <div className="item r-10px cursor-pointer">
+                    <Link to="./Profile" className="item r-10px cursor-pointer text-link">
                         <span> <img className="icon-mobile" src="../images/icons/profile-icon.png" alt="profile" /></span>
-                    </div>
-                    <div className="item r-10px cursor-pointer">
+                    </Link>
+                    <Link to="./All-Schedule" className="item r-10px cursor-pointer text-link">
                         <span> <img className="icon-mobile" src="../images/icons/dashboard-icon-black.png" alt="dashboard" /></span>
-                    </div>
-                    <div className="item r-10px cursor-pointer">
+                    </Link>
+                    <Link to="./Activity" className="item r-10px cursor-pointer">
                         <span> <img className="icon-mobile" src="../images/icons/activity-icon-black.png" alt="activity" /></span>
-                    </div>
+                    </Link>
                     <div className="item r-10px cursor-pointer">
                         <span> <img className="icon-mobile style-width" src="../images/icons/chat-bubble-icon.png"
                             alt="" /></span>
                     </div>
-                    <div className="item r-10px cursor-pointer">
+                    <Link to="/" className="item r-10px cursor-pointer">
                         <span><img className="icon-mobile" src="../images/icons/logout-icon.svg" alt="logout" /></span>
-                    </div>
+                    </Link>
                 </div>
             </nav>
         )

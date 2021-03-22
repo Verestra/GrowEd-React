@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Mobile_Nav from '../../components/Mobile-Nav';
 import Side_Menu from '../../components/Side-Menu';
+import { Link } from "react-router-dom";
 
 export class Profile extends Component {
     render() {
