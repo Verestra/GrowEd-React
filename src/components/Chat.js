@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class Chat extends Component {
     render() {
@@ -6,15 +7,15 @@ class Chat extends Component {
             <aside id="chat-container" className="m-0">
             <div className="d-flex flex-row justify-content-between align-items-center">
                 <h3 className="mb-0">Message</h3>
-                <img src="images/icons/circle-plus-icon.svg" alt="" />
+                <img src="../images/icons/circle-plus-icon.svg" alt="" />
             </div>
             <div className="search-box p-2 r-20px">
-                <img src="images/icons/search-icon.svg" alt="search icon" />
+                <img src="../images/icons/search-icon.svg" alt="search icon" />
                 <input type="text" placeholder="Search" />
             </div>
             <div className="message-list">
                 <div className="message">
-                    <img src="images/photo-profile/profile-nisa.png" alt="Nisa Sabyan" />
+                    <img src="../images/photo-profile/profile-nisa.png" alt="Nisa Sabyan" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Nisa Sabyan</span></div>
@@ -25,7 +26,7 @@ class Chat extends Component {
                 </div>
 
                 <div className="message">
-                    <img src="images/photo-profile/profile-rio.png" alt="Rio Dewanto" />
+                    <img src="../images/photo-profile/profile-rio.png" alt="Rio Dewanto" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Rio Dewanto</span></div>
@@ -36,7 +37,7 @@ class Chat extends Component {
                 </div>
 
                 <div className="message">
-                    <img src="images/photo-profile/profile-group21.png" alt="Group 21" />
+                    <img src="../images/photo-profile/profile-group21.png" alt="Group 21" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Discussion Group 21 (5)</span></div>
@@ -47,7 +48,7 @@ class Chat extends Component {
                 </div>
 
                 <div className="message">
-                    <img src="images/photo-profile/profile-isyana.png" alt="Isyana Sarasvati" />
+                    <img src="../images/photo-profile/profile-isyana.png" alt="Isyana Sarasvati" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Isyana Sarasvati</span></div>
@@ -58,7 +59,7 @@ class Chat extends Component {
                 </div>
 
                 <div className="message">
-                    <img src="images/photo-profile/profile-tompi.png" alt="Tompi" />
+                    <img src="../images/photo-profile/profile-tompi.png" alt="Tompi" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Tompi</span></div>
@@ -69,7 +70,7 @@ class Chat extends Component {
                 </div>
 
                 <div className="message">
-                    <img src="images/photo-profile/profile-group.png" alt="Friend" />
+                    <img src="../images/photo-profile/profile-group.png" alt="Friend" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>You, Tompi, Isyana Sarasvati, Peppy</span></div>
@@ -80,7 +81,7 @@ class Chat extends Component {
                 </div>
 
                 <div className="message">
-                    <img src="images/photo-profile/profile-peppy.png" alt="Peppy" />
+                    <img src="../images/photo-profile/profile-peppy.png" alt="Peppy" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Peppy</span></div>
@@ -90,7 +91,7 @@ class Chat extends Component {
                     </div>
                 </div>
                 <div className="message">
-                    <img src="images/photo-profile/profile-sandra.png" alt="Sandra Dewi" />
+                    <img src="../images/photo-profile/profile-sandra.png" alt="Sandra Dewi" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Sandra Dewi</span></div>
@@ -100,7 +101,7 @@ class Chat extends Component {
                     </div>
                 </div>
                 <div className="message">
-                    <img src="images/photo-profile/profile-reza.png" alt="Reza Rahadian" />
+                    <img src="../images/photo-profile/profile-reza.png" alt="Reza Rahadian" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Reza Rahadian</span></div>
@@ -110,7 +111,7 @@ class Chat extends Component {
                     </div>
                 </div>
                 <div className="message">
-                    <img src="images/photo-profile/profile-group23.png" alt="Group 23" />
+                    <img src="../images/photo-profile/profile-group23.png" alt="Group 23" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Discussion Group 23 (5)</span></div>
@@ -120,7 +121,7 @@ class Chat extends Component {
                     </div>
                 </div>
                 <div className="message">
-                    <img src="images/photo-profile/profile-raisa.png" alt="Raisa" />
+                    <img src="../images/photo-profile/profile-raisa.png" alt="Raisa" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Raisa</span></div>
@@ -130,7 +131,7 @@ class Chat extends Component {
                     </div>
                 </div>
                 <div className="message">
-                    <img src="images/photo-profile/profile-adrian.png" alt="dr. Adrian" />
+                    <img src="../images/photo-profile/profile-adrian.png" alt="dr. Adrian" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>dr.Adrian</span></div>
@@ -140,7 +141,7 @@ class Chat extends Component {
                     </div>
                 </div>
                 <div className="message">
-                    <img src="images/photo-profile/profile-uus.png" alt="Uus" />
+                    <img src="../images/photo-profile/profile-uus.png" alt="Uus" />
                     <div className="d-flex flex-row justify-content-between flex-grow-1">
                         <div>
                             <div className="sender-name"><span>Uus</span></div>

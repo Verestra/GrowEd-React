@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Mobile_Nav from '../components/Mobile-Nav';
-import Side_Menu from '../components/Side-Menu';
+import Mobile_Nav from '../../../components/Mobile-Nav';
+import Side_Menu from '../../../components/Side-Menu';
 
 
 class Activity extends Component {
@@ -49,7 +49,7 @@ class Activity extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
                                             <td><span class="good-score">86</span></td>
-                                            <td scope="col"><img src="images/icons/list-icon.svg" class="" alt="" />
+                                            <td scope="col"><img src="../images/icons/list-icon.svg" class="" alt="" />
                                             </td>
                                         </tr>
         
@@ -69,7 +69,7 @@ class Activity extends Component {
                                             </td>
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span> </td>
                                             <td><span class="good-score">71</span></td>
-                                            <td scope="col"><img src="images/icons/list-icon.svg" class="" alt="" />
+                                            <td scope="col"><img src="../images/icons/list-icon.svg" class="" alt="" />
                                             </td>
                                         </tr>
         
@@ -89,14 +89,14 @@ class Activity extends Component {
                                             </td>
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span> </td>
                                             <td><span class="medium-score">62</span></td>
-                                            <td scope="col"><img src="images/icons/list-icon.svg" class="" alt="" />
+                                            <td scope="col"><img src="../images/icons/list-icon.svg" class="" alt="" />
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div class="d-flex align-items-center justify-content-center">
                                     <span class="view-all cursor-pointer" onclick="window.location='my-class.html';">view all
-                                        <img src="images/icons/forward-icon.svg" width="12" height="12" alt="" /></span>
+                                        <img src="../images/icons/forward-icon.svg" width="12" height="12" alt="" /></span>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@ class Activity extends Component {
                                             <td>Beginner</td>
                                             <td>Free</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                         <tr>
                                             <td>HTML and CSS to code</td>
@@ -153,7 +153,7 @@ class Activity extends Component {
                                             <td>Intermediate</td>
                                             <td>$10</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                         <tr>
                                             <td>Indonesian war history</td>
@@ -162,7 +162,7 @@ class Activity extends Component {
                                             <td>Advance</td>
                                             <td>$50</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                         <tr>
                                             <td>Buddhism and Modern Psychology</td>
@@ -171,7 +171,7 @@ class Activity extends Component {
                                             <td>Beginner</td>
                                             <td>Free</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                         <tr>
                                             <td>Financial markets</td>
@@ -180,7 +180,7 @@ class Activity extends Component {
                                             <td>Intermediate</td>
                                             <td>$10</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                         <tr>
                                             <td>Corporate finance</td>
@@ -189,7 +189,7 @@ class Activity extends Component {
                                             <td>Advance</td>
                                             <td>$50</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                         <tr>
                                             <td>Algorithm specialization</td>
@@ -198,7 +198,7 @@ class Activity extends Component {
                                             <td>Advance</td>
                                             <td>$50</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                         <tr>
                                             <td>Business and Financial Modeling</td>
@@ -207,7 +207,7 @@ class Activity extends Component {
                                             <td>Beginner</td>
                                             <td>Free</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                         <tr>
                                             <td>Marketing in a Digital World</td>
@@ -216,7 +216,7 @@ class Activity extends Component {
                                             <td>Intermediate</td>
                                             <td>$10</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                         <tr>
                                             <td>Social Psychology</td>
@@ -225,7 +225,7 @@ class Activity extends Component {
                                             <td>Advance</td>
                                             <td>$50</td>
                                             <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -233,7 +233,7 @@ class Activity extends Component {
                             <div class="col-12 pagination-container d-flex flex-row justify-content-between align-items-center">
                                 <span class="w-100">Showing 10 out of 64</span>
                                 <div class="d-flex flex-row justify-content-evenly">
-                                    <div class="table-page "><img class="rotate-180" src="images/icons/forward-icon.svg"
+                                    <div class="table-page "><img class="rotate-180" src="../images/icons/forward-icon.svg"
                                             alt="" />
                                     </div>
                                     <span class="table-page  active">1</span>
@@ -241,7 +241,7 @@ class Activity extends Component {
                                     <span class="table-page ">3</span>
                                     <span class="table-page ">4</span>
                                     <span class="table-page ">5</span>
-                                    <div class="table-page "><img src="images/icons/forward-icon.svg" alt="" />
+                                    <div class="table-page "><img src="../images/icons/forward-icon.svg" alt="" />
                                     </div>
                                 </div>
                             </div>

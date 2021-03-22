@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Mobile_Nav from '../components/Mobile-Nav';
-import Side_Menu from '../components/Side-Menu';
-import Chat from '../components/Chat';
+import Mobile_Nav from '../../../components/Mobile-Nav';
+import Side_Menu from '../../../components/Side-Menu';
+import Chat from '../../../components/Chat';
 
-class All_Schedule extends Component {
+class For_You extends Component {
     render() {
         return (
             <>
@@ -14,7 +14,7 @@ class All_Schedule extends Component {
                         <div className="news-card r-10px">
                             <h5 className="news-title">News</h5>
                             <div className="news-image-container">
-                                <img className="w-100" src="images/img/news-image-1.jpg" alt="" />
+                                <img className="w-100" src="../images/img/news-image-1.jpg" alt="" />
                                 <div className="carousel-indicators">
                                     <button className="active" type="button"></button>
                                     <button type="button"></button>
@@ -25,7 +25,7 @@ class All_Schedule extends Component {
                         <div className="news-card r-10px mt-3">
                             <div className="d-flex flex-row justify-content-between">
                                 <h5 className="news-title px-5">Today, March 16</h5>
-                                <img src="images/icons/calendar-icon.svg" alt="" className="px-4" />
+                                <img src="../images/icons/calendar-icon.svg" alt="" className="px-4" />
                             </div>
                             <div className="news-image-container mt-3">
                                 <div className="d-flex flex-row justify-content-evenly date-group">
@@ -62,48 +62,25 @@ class All_Schedule extends Component {
                                     <span className="cursor-pointer text-color" onclick="window.location='all-schedule.html';">All schedule&nbsp;</span>
                                     <span className="cursor-pointer text-color-2" onclick="window.location='for-you.html';">For You</span>
                                 </div>
-                                <div className="hr-sect">8:00</div>
-                                <div className="date-detail">
-                                    <div className="date-time">
-                                        <span className="text-span">Introduction to <br /> Banking Finance <img align="right"
-                                            className="dots-top" src="images/icons/3-dots.png" alt="" /></span>
-                                        <span className="text-span-1">100 Minutes <img align="right" className="money-top"
-                                            src="images/icons/money-icon.png" alt="" /></span>
+                                <div class="hr-sect">8:00</div>
+                                <div class="date-detail">
+                                    <div class="date-time">
+                                        <span class="text-span">Introduction to <br /> Banking Finance <img align="right" class="dots-top" src="../images/icons/3-dots.png" alt="" /></span>
+                                        <span class="text-span-1">100 Minutes <img align="right" class="money-top" src="../images/icons/money-icon.png" alt="" /></span>
                                     </div>
-                                    <div className="date-time-1">
-                                        <div className="d-flex align-items-center justify-content-between">
-                                            <span className="text-span-2">Trygonometry <p className="minutes">50 Minutes</p></span>
-                                            <span className="span-line"></span>
-                                        </div>
+                                    <div class="date-time-empty">
                                     </div>
                                 </div>
-                                <div className="hr-sect">11:00</div>
-                                <div className="date-detail">
-                                    <div className="date-time">
-                                        <span className="text-span">History of Europe <br /> Early 16th Century<img align="right"
-                                            className="dots-top" src="images/icons/3-dots.png" alt="" /></span>
-                                        <span className="text-span-1">100 Minutes <img align="right" className="history-top"
-                                            src="images/icons/history-icon.png" alt="" /></span>
+                                <div class="hr-sect">11:00</div>
+                                <div class="date-detail">
+                                    <div class="date-time">
+                                        <span class="text-span">History of Europe <br /> Early 16th Century<img align="right" class="dots-top" src="../images/icons/3-dots.png" alt="" /></span>
+                                        <span class="text-span-1">100 Minutes <img align="right" class="history-top" src="../images/icons/history-icon.png" alt="" /></span>
                                     </div>
-                                    <div className="date-time-empty">
+                                    <div class="date-time-empty">
                                     </div>
                                 </div>
-                                <div className="hr-sect">13:00</div>
-                                <div className="date-detail">
-                                    <div className="date-time">
-                                        <span className="text-span">Fundamental of <br /> Front End Dev <img align="right"
-                                            className="dots-top" src="images/icons/3-dots.png" alt="" /></span>
-                                        <span className="text-span-1">50 Minutes <img align="right" className="software-top"
-                                            src="images/icons/software-icon.png" alt="" /></span>
-                                    </div>
-                                    <div className="date-time-1">
-                                        <div className="d-flex align-items-center justify-content-between">
-                                            <span className="text-span-2">Molecular <p className="minutes">50 Minutes</p></span>
-                                            <span className="span-line"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="hr-sect">Finish</div>
+                                <div class="hr-sect">Finish</div>
                             </div>
                         </div>
                     </div>
@@ -114,5 +91,7 @@ class All_Schedule extends Component {
     }
 }
 
-export default All_Schedule
+export default For_You
+
+
 

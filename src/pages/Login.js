@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-import './assets/css/style.css';
-// import ReactDOM from 'react-dom';
-
+import '../assets/css/style.css';
 
 class App extends Component {
   render() {
@@ -27,8 +25,8 @@ class App extends Component {
                 password?</Link>
 
             <div className="d-grid gap-2 col-12 mx-auto">
-                <Link to="/All-Schedule" className="btn btn-primary-color mb-2" type="button">Login</Link>
-                <Link to="/Dashboard-Fasilitator" className="btn btn-google" type="button">
+                <Link to="/User/All-Schedule" className="btn btn-primary-color mb-2" type="button">Login</Link>
+                <Link to="/Fasilitator/All-Schedule" className="btn btn-google" type="button">
                     <img src="images/icons/google-icon.svg" alt="google" className="google-icon mx-1" />Login with google
                 </Link>
             <div className="new-regist">

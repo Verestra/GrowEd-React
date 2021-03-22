@@ -49,6 +49,14 @@ body {
   border-spacing:0 5px;
 }
 
+.fw-600 {
+  font-weight: 600;
+}
+
+.complete-course {
+  color: rgba(151,151,151,1);
+}
+
 .veryLow-score {
   font-family: Montserrat;
   font-size: 24px;
