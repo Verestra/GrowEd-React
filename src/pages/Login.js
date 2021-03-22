@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-import '../assets/css/style.css';
-
 class App extends Component {
   render() {
     return (
@@ -30,7 +28,7 @@ class App extends Component {
                     <img src="images/icons/google-icon.svg" alt="google" className="google-icon mx-1" />Login with google
                 </Link>
             <div className="new-regist">
-                <span className="new-regist-text">New user? </span> <a href="register.html">Register</a>
+                <span className="new-regist-text">New user? </span> <Link to="./Register">Register</Link>
             </div>
             </div>
         </div>

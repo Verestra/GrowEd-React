@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Login from './pages/Login';
 import Reset_Password from './pages/Reset-Password/Reset-Password';
+import Reset_Password_Otp from './pages/Reset-Password/Reset-Password-Otp';
+import Reset_Password_New from './pages/Reset-Password/Reset-Password-New';
+import Register from './pages/Register';
 import Profile from './pages/User/Profile';
 import All_Schedule from './pages/User/Dashboard/All-Schedule';
 import For_You from './pages/User/Dashboard/For-You';
@@ -25,6 +28,9 @@ const AppWithRouter = () => {
       {/* domain/ => menampilkan App.js*/}
       <Route path="/" exact component={Login} />
       <Route path="/Reset-Password" component={Reset_Password} />
+      <Route path="/Reset-Password-Otp" component={Reset_Password_Otp} />  
+      <Route path="/Reset-Password-New" component={Reset_Password_New} />
+      <Route path="/Register" exact component={Register} />
       <Route path="/User/Profile" component={Profile} />
       <Route path="/User/All-Schedule" exact component={All_Schedule} />
       <Route path="/User/For-You" component={For_You} />

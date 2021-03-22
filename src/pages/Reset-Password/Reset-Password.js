@@ -21,8 +21,8 @@ class Reset_Password extends Component {
                             <div class="form-group">
                                 <label for="email" class="form-head bg-white">Email</label>
                                 <input type="email" class="form-control" id="email" placeholder="" />
+                                <Link to="./Reset-Password-Otp" className="btn btn-primary-color my-3 w-100" type="button"> Send </Link>
                             </div>
-                            <button class="btn btn-primary-color r-5px my-3">Send</button>
                         </div>
                     </div>
                 </div>
