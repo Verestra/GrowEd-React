@@ -18,6 +18,10 @@ import My_class from './pages/User/Activity/My-Class';
 import Class_Progress from './pages/User/Activity/Class-Progress';
 import Class_Detail from './pages/User/Activity/Class-Detail';
 import Chat_Pages from './pages/media-queries/Chat-Pages';
+import Dashboard_Fasilitator from './pages/Fasilitator/Dashboard/Dashboard-Fasilitator';
+import Activity_Fasilitator from './pages/Fasilitator/Activity/Activity';
+import Class_Details from './pages/Fasilitator/Activity/Class-Details';
+import Member from './pages/Fasilitator/Activity/Member';
 
 const AppWithRouter = () => {
   return (
@@ -38,6 +42,10 @@ const AppWithRouter = () => {
       <Route path="/User/My-Class" component={My_class} />
       <Route path="/User/Class-Progress" component={Class_Progress} />
       <Route path="/User/Class-Detail" component={Class_Detail} />
+      <Route path="/Fasilitator/Dashboard" exact component={Dashboard_Fasilitator} />
+      <Route path="/Fasilitator/Activity" exact component={Activity_Fasilitator} />
+      <Route path="/Fasilitator/Class-Details" exact component={Class_Details} />
+      <Route path="/Fasilitator/Member" exact component={Member} />
       <Route path="/Chat-Pages" component={Chat_Pages} />
       {/* domain/demo => menampilkan DemoHtml.js */}
       {/* <Route path="/all-schedule" component={All-Schedule} /> */}

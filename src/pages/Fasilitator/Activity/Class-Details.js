@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+
 import Mobile_Nav from '../../../components/Mobile-Nav';
 import Side_Menu from '../../../components/Side-Menu';
 import { Link } from "react-router-dom";
 
-class Class_Detail extends Component {
+ class Class_Details extends Component {
     render() {
         return (
             <>
@@ -15,8 +16,8 @@ class Class_Detail extends Component {
                             <Link to="./Activity">
                                 <img class="rotate-180" src="../images/icons/forward-icon.svg" alt="prev page" />
                             </Link>
-                Know more javascript
-            </h1>
+                             Front-end fundamentals
+                            </h1>
                         <div class="card bg-white border-0 p-0 r-10px">
                             <div class="class-detail-cover-container">
                                 <img src="../images/img/class-detail-cover.png" class="class-cover-image r-top-10px"
@@ -28,7 +29,7 @@ class Class_Detail extends Component {
                                     </div>
                                     <div class="cover-description-content">
                                         <div>
-                                            <h2 class="cover-title">Know more Javascript</h2>
+                                            <h2 class="cover-title">Front-end fundamentals</h2>
                                             <div class="cover-description-level">
                                                 <span>Level : Beginner</span>
                                                 <span>Category : Software</span>
@@ -52,8 +53,9 @@ class Class_Detail extends Component {
                                         <Link to="./Class-Detail" class="tab-menu active cursor-pointer text-link">
                                             Information</Link>
                                         <Link to="./Class-Progress" class="tab-menu cursor-pointer text-link">Class
-                                            Progress</Link>
+                                             Progress</Link>
                                         <div class="tab-menu">Class Discussion</div>
+                                        <Link to="./Member" class="tab-menu cursor-pointer text-link">Member </Link>
                                     </div>
                                     <div class="description">
                                         <h3>Description</h3>
@@ -94,4 +96,4 @@ class Class_Detail extends Component {
     }
 }
 
-export default Class_Detail
+export default Class_Details
