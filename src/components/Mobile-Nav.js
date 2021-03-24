@@ -9,7 +9,7 @@ class MobileNav extends Component {
                     <Link to="./Profile" className="item r-10px cursor-pointer text-link">
                         <span> <img className="icon-mobile" src="../images/icons/profile-icon.png" alt="profile" /></span>
                     </Link>
-                    <Link to="./All-Schedule" className="item r-10px cursor-pointer text-link">
+                    <Link to="./Dashboard" className="item r-10px cursor-pointer text-link">
                         <span> <img className="icon-mobile" src="../images/icons/dashboard-icon-black.png" alt="dashboard" /></span>
                     </Link>
                     <Link to="./Activity" className="item r-10px cursor-pointer">

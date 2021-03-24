@@ -18,7 +18,7 @@ class SideMenu extends Component {
                 </Link>
                 
                 <div className="menu-container">
-                    <Link to="./All-Schedule" className="side-link cursor-pointer text-link">
+                    <Link to="./Dashboard" className="side-link cursor-pointer text-link">
                         <img src="../images/icons/dashboard-icon.svg" alt="" />
                         Dashboard
                     </Link>

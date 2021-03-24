@@ -23,7 +23,7 @@ class App extends Component {
                 password?</Link>
 
             <div className="d-grid gap-2 col-12 mx-auto">
-                <Link to="/User/All-Schedule" className="btn btn-primary-color mb-2" type="button">Login</Link>
+                <Link to="/User/Dashboard" className="btn btn-primary-color mb-2" type="button">Login</Link>
                 <Link to="/Fasilitator/Dashboard" className="btn btn-google" type="button">
                     <img src="images/icons/google-icon.svg" alt="google" className="google-icon mx-1" />Login with google
                 </Link>

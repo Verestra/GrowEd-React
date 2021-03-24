@@ -11,14 +11,14 @@ import ResetPasswordOtp from './pages/Reset-Password/Reset-Password-Otp';
 import ResetPasswordNew from './pages/Reset-Password/Reset-Password-New';
 import Register from './pages/Register';
 import Profile from './pages/User/Profile';
-import AllSchedule from './pages/User/Dashboard/All-Schedule';
+import AllSchedule from './pages/User/Dashboard/Dashboard';
 import ForYou from './pages/User/Dashboard/For-You';
 import Activity from './pages/User/Activity/Activity';
 import MyClass from './pages/User/Activity/My-Class';
 import ClassProgress from './pages/User/Activity/Class-Progress';
 import ClassDetail from './pages/User/Activity/Class-Detail';
 import ChatPages from './pages/media-queries/Chat-Pages';
-import DashboardFasilitator from './pages/Fasilitator/Dashboard/Dashboard-Fasilitator';
+import DashboardFasilitator from './pages/Fasilitator/Dashboard/Dashboard';
 import ActivityFasilitator from './pages/Fasilitator/Activity/Activity';
 import ClassDetails from './pages/Fasilitator/Activity/Class-Details';
 import Member from './pages/Fasilitator/Activity/Member';
@@ -36,7 +36,7 @@ const AppWithRouter = () => {
       <Route path="/Reset-Password-New" component={ResetPasswordNew} />
       <Route path="/Register" exact component={Register} />
       <Route path="/User/Profile" component={Profile} />
-      <Route path="/User/All-Schedule" exact component={AllSchedule} />
+      <Route path="/User/Dashboard" exact component={AllSchedule} />
       <Route path="/User/For-You" component={ForYou} />
       <Route path="/User/Activity" component={Activity} />
       <Route path="/User/My-Class" component={MyClass} />
