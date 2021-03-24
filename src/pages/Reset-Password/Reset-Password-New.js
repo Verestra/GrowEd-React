@@ -9,7 +9,7 @@ const customStyles = {
         right: '0%',
         bottom: '0%',
         left: '50%',
-        backgroundColor: 'rgb(0,0,0,0.75)'
+        backgroundColor: 'rgba(0,0,0,0.75)'
     },
     overlay: {
         backgroundColor: 'transparent'
@@ -17,7 +17,7 @@ const customStyles = {
 };
 
 
-function Reset_Password_New() {
+function ResetPasswordNew() {
         const [modalIsOpen, setModalIsOpen] = useState(false)
         return (
             <div class="forgot-pass-content">
@@ -65,4 +65,4 @@ function Reset_Password_New() {
         )
 }
 
-export default Reset_Password_New
+export default ResetPasswordNew

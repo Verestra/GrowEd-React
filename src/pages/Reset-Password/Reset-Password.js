@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-class Reset_Password extends Component {
+class ResetPassword extends Component {
     render() {
         return (
             <>
@@ -31,4 +31,4 @@ class Reset_Password extends Component {
     }
 }
 
-export default Reset_Password
+export default ResetPassword

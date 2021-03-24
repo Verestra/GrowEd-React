@@ -1,13 +1,30 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+
+import Modal from 'react-modal';
 import { Link } from "react-router-dom";
 
 
+const customStyles = {
+    content: {
+        top: '0%',
+        right: '0%',
+        bottom: '0%',
+        left: '50%',
+        backgroundColor: 'rgb(0,0,0,0.75)'
+    },
+    overlay: {
+        backgroundColor: 'transparent'
+    }
+};
 
-class SideMenu extends Component {
-    render() {
+
+function test () {
+    const [modalIsOpen, setModalIsOpen] = useState(false)
         return (
+            <>
                 <aside className="bg-white">
-                <div className="notification">
+                <div onClick={() => setModalIsOpen(true)} className="notification">
                     <img className="cursor-pointer" align="right" src="../images/icons/notification-icon-black.svg" alt="" />
                 </div>
                 
@@ -40,9 +57,15 @@ class SideMenu extends Component {
                     </Link>
                     </div>
                  </aside>
-            
+            <Modal isOpen={modalIsOpen}
+                         shouldCloseOnOverlayClick={false}
+                          onRequestClose={() => setModalIsOpen(false)}
+                           style={customStyles}>
+                               
+            </Modal>
+
+        </>
         )
-    }
 }
 
-export default SideMenu
+export default test

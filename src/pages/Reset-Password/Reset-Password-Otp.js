@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import './style.css';
 
-import Reset_Password_New from "./Reset-Password-New";
-
-class Reset_Password_Otp extends Component {
+class ResetPasswordOtp extends Component {
     render() {
         return (
             <>
@@ -38,4 +36,4 @@ class Reset_Password_Otp extends Component {
     }
 }
 
-export default Reset_Password_Otp
+export default ResetPasswordOtp

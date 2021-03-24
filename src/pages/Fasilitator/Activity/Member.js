@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import Mobile_Nav from '../../../components/Mobile-Nav';
-import Side_Menu from '../../../components/Side-Menu';
+import MobileNav from '../../../components/Mobile-Nav';
+import SideMenu from '../../../components/Side-Menu';
 import { Link } from "react-router-dom";
 
 const customStyles = {
@@ -22,9 +22,9 @@ function Member () {
     const [modalIsOpen, setModalIsOpen] = useState(false)
         return (
             <>
-                <Mobile_Nav />
+                <MobileNav />
                 <div class="dashboard-container">
-                    <Side_Menu />
+                    <SideMenu />
                     <div id="main-content" class="bg-transparent p-3 d-flex flex-column justify-content-start">
                         <h1 class="d-flex align-items-center">
                             <Link to="./Activity">
@@ -35,7 +35,7 @@ function Member () {
                         <div class="card bg-white border-0 p-0 r-10px">
                             <div class="class-detail-cover-container">
                                 <img src="../images/img/class-detail-cover.png" class="class-cover-image r-top-10px"
-                                    alt="Cover image" />
+                                    alt="Cover" />
 
                                 <div class="cover-description">
                                     <div class="category-icon-container r-10px">
@@ -83,7 +83,7 @@ function Member () {
                                                 <div>
                                                     <div><span className="member-name">Deddy Corbuzier</span></div>
                                                 </div>
-                                                <div onClick={() => setModalIsOpen(false)} className="cursor-pointer"><img className="black" src="../images/icons/modal-close.png"/></div>
+                                                <div onClick={() => setModalIsOpen(false)} className="cursor-pointer"><img className="black" src="../images/icons/modal-close.png" alt="close"/></div>
                                             </div>
                                             <div class="modal-content d-flex flex-row mt-4 align-items-center justify-content-between" >
                                                 <span className="text-content mx-4">HTML Essential Training</span>
@@ -125,7 +125,7 @@ function Member () {
                                                 <div>
                                                     <div><span className="member-name">Deddy Corbuzier</span></div>
                                                 </div>
-                                                <div><img className="black" src="../images/icons/List.png"/></div>
+                                                <div><img className="black" src="../images/icons/List.png" alt="list-black"/></div>
                                             </div>
                                         </div>
 

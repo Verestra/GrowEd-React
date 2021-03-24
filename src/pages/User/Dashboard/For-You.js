@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Mobile_Nav from '../../../components/Mobile-Nav';
-import Side_Menu from '../../../components/Side-Menu';
+import MobileNav from '../../../components/Mobile-Nav';
+import SideMenu from '../../../components/Side-Menu';
 import Chat from '../../../components/Chat';
 import { Link } from "react-router-dom";
 
-class For_You extends Component {
+class ForYou extends Component {
     render() {
         return (
             <>
-                <Mobile_Nav />
+                <MobileNav />
                 <div className="dashboard-container">
-                    <Side_Menu />
+                    <SideMenu />
                     <div id="dashboard-peserta">
                         <div className="news-card r-10px">
                             <h5 className="news-title">News</h5>
@@ -92,7 +92,7 @@ class For_You extends Component {
     }
 }
 
-export default For_You
+export default ForYou
 
 
 

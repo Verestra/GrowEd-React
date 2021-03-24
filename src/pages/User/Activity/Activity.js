@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import Mobile_Nav from '../../../components/Mobile-Nav';
-import Side_Menu from '../../../components/Side-Menu';
+import MobileNav from '../../../components/Mobile-Nav';
+import SideMenu from '../../../components/Side-Menu';
 import { Link } from "react-router-dom";
+// import Courses from '../../../assets/data/courses.json';
 
 
 class Activity extends Component {
     render() {
         return (
             <>
-            <Mobile_Nav />
+            <MobileNav />
             <div class="dashboard-container">
-                <Side_Menu />
+                <SideMenu />
                 <div id="main-content" class="bg-transparent p-3 d-flex flex-column justify-content-start">
                     <h1 class="">Activity</h1>
                     <div class="card bg-transparent border-0 p-0">
@@ -50,7 +51,7 @@ class Activity extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
                                             <td><span class="good-score">86</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" class="" alt="" />
+                                            <td><img src="../images/icons/list-icon.svg" alt="list"/>
                                             </td>
                                         </tr>
         
@@ -70,7 +71,7 @@ class Activity extends Component {
                                             </td>
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span> </td>
                                             <td><span class="good-score">71</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" class="" alt="" />
+                                            <td><img src="../images/icons/list-icon.svg" alt="list"/>
                                             </td>
                                         </tr>
         
@@ -90,14 +91,14 @@ class Activity extends Component {
                                             </td>
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span> </td>
                                             <td><span class="medium-score">62</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" class="" alt="" />
+                                            <td><img src="../images/icons/list-icon.svg" alt="list" />
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div class="d-flex align-items-center justify-content-center">
                                     <Link to="./My-Class" class="view-all cursor-pointer">view all
-                                        <img src="../images/icons/forward-icon.svg" width="12" height="12" alt="" /></Link>
+                                        <img src="../images/icons/forward-icon.svg" width="12" height="12" alt="next"/></Link>
                                 </div>
                             </div>
                         </div>
@@ -138,95 +139,15 @@ class Activity extends Component {
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        
                                         <tr class="cursor-pointer">
-                                             <td><Link to="Class-Detail" className="text-link">Know more Javascript</Link> </td>
+                                            <td><Link to="Class-Detail" className="text-link">Know more Javascript</Link> </td>
                                             <td>Software</td>
                                             <td>Javascript from the basic for...</td>
                                             <td>Beginner</td>
                                             <td>Free</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>HTML and CSS to code</td>
-                                            <td>Software</td>
-                                            <td>Start combining HTML and CSS to...</td>
-                                            <td>Intermediate</td>
-                                            <td>$10</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Indonesian war history</td>
-                                            <td>History</td>
-                                            <td>From the first colonialization until..</td>
-                                            <td>Advance</td>
-                                            <td>$50</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Buddhism and Modern Psychology</td>
-                                            <td>Psychology</td>
-                                            <td>Buddhism and science are deeply...</td>
-                                            <td>Beginner</td>
-                                            <td>Free</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Financial markets</td>
-                                            <td>Finance</td>
-                                            <td>An overview of the ideas, methods...</td>
-                                            <td>Intermediate</td>
-                                            <td>$10</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Corporate finance</td>
-                                            <td>Finance</td>
-                                            <td>Introduction to the fundamentals..</td>
-                                            <td>Advance</td>
-                                            <td>$50</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Algorithm specialization</td>
-                                            <td>Math</td>
-                                            <td>Learn to think like a computer...</td>
-                                            <td>Advance</td>
-                                            <td>$50</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Business and Financial Modeling</td>
-                                            <td>Software</td>
-                                            <td>Designed to help you make...</td>
-                                            <td>Beginner</td>
-                                            <td>Free</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Marketing in a Digital World</td>
-                                            <td>Software</td>
-                                            <td>This class examines how digital...</td>
-                                            <td>Intermediate</td>
-                                            <td>$10</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Social Psychology</td>
-                                            <td>Psychology</td>
-                                            <td>This class offers some answers...</td>
-                                            <td>Advance</td>
-                                            <td>$50</td>
-                                            <td scope="col"><a class="badge btn-success r-15px">Register</a> </td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><span class="badge btn-success r-15px">Register</span> </td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="list"/></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -234,15 +155,14 @@ class Activity extends Component {
                             <div class="col-12 pagination-container d-flex flex-row justify-content-between align-items-center">
                                 <span class="w-100">Showing 10 out of 64</span>
                                 <div class="d-flex flex-row justify-content-evenly">
-                                    <div class="table-page "><img class="rotate-180" src="../images/icons/forward-icon.svg"
-                                            alt="" />
+                                    <div class="table-page "><img class="rotate-180" src="../images/icons/forward-icon.svg" alt="next"/>
                                     </div>
                                     <span class="table-page  active">1</span>
                                     <span class="table-page ">2</span>
                                     <span class="table-page ">3</span>
                                     <span class="table-page ">4</span>
                                     <span class="table-page ">5</span>
-                                    <div class="table-page "><img src="../images/icons/forward-icon.svg" alt="" />
+                                    <div class="table-page "><img src="../images/icons/forward-icon.svg" alt="next"/>
                                     </div>
                                 </div>
                             </div>

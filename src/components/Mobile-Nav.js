@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-class Mobile_Nav extends Component {
+class MobileNav extends Component {
     render() {
         return (
             <nav>
@@ -28,4 +28,4 @@ class Mobile_Nav extends Component {
     }
 }
 
-export default Mobile_Nav
+export default MobileNav

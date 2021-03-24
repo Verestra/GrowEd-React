@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Mobile_Nav from '../../../components/Mobile-Nav';
-import Side_Menu from '../../../components/Side-Menu';
+import MobileNav from '../../../components/Mobile-Nav';
+import SideMenu from '../../../components/Side-Menu';
 import { Link } from "react-router-dom";
 
-class My_Class extends Component {
+class MyClass extends Component {
     render() {
         return (
             <>
-                <Mobile_Nav />
+                <MobileNav />
                 <div class="dashboard-container">
-                    <Side_Menu />
+                    <SideMenu />
                     <div id="main-content" class="bg-transparent p-3 d-flex flex-column justify-content-start">
                         <h1 class="d-flex align-items-center">
                             <Link to="./Activity">
@@ -71,7 +71,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
                                             <td><span class="good-score">86</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" />
+                                            <td><img src="../images/icons/list-icon.svg" alt="" />
                                             </td>
                                         </tr>
 
@@ -92,7 +92,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
                                             <td><span class="good-score">71</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
 
                                         <tr>
@@ -112,7 +112,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
                                             <td><span class="medium-score">62</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
 
                                         <tr>
@@ -132,7 +132,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
                                             <td><span class="good-score">71</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
 
                                         <tr>
@@ -152,7 +152,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Completed</span>
                                             </td>
                                             <td><span class="complete-score">100</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
 
                                         <tr>
@@ -172,7 +172,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
                                             <td><span class="low-score">42</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
 
                                         <tr>
@@ -192,7 +192,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
                                             <td><span class="veryLow-score">21</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
 
                                         <tr>
@@ -212,7 +212,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Completed</span>
                                             </td>
                                             <td><span class="complete-score">98</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
 
                                         <tr>
@@ -232,7 +232,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Completed</span>
                                             </td>
                                             <td><span class="good-score">86</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
 
                                         <tr>
@@ -252,7 +252,7 @@ class My_Class extends Component {
                                             <td><span class="badge badge-ongoing p-2 r-15px">Completed</span>
                                             </td>
                                             <td><span class="medium-score">72</span></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" alt="" /></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -280,4 +280,4 @@ class My_Class extends Component {
     }
 }
 
-export default My_Class
+export default MyClass

@@ -17,7 +17,7 @@ body {
 
 .loginCenter {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .login-center {
@@ -114,7 +114,7 @@ body {
   border-top: none;
   border-left: none;
   border-right: none;
-  width: 64px;
+  width: 42px;
   height: 64px;
 }
 .forgot-pass {

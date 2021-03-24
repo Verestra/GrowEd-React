@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-import Mobile_Nav from '../../../components/Mobile-Nav';
-import Side_Menu from '../../../components/Side-Menu';
+import MobileNav from '../../../components/Mobile-Nav';
+import SideMenu from '../../../components/Side-Menu';
 import { Link } from "react-router-dom";
 
- class Class_Details extends Component {
+ class ClassDetails extends Component {
     render() {
         return (
             <>
-                <Mobile_Nav />
+                <MobileNav />
                 <div class="dashboard-container">
-                    <Side_Menu />
+                    <SideMenu />
                     <div id="main-content" class="bg-transparent p-3 d-flex flex-column justify-content-start">
                         <h1 class="d-flex align-items-center">
                             <Link to="./Activity">
@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
                         <div class="card bg-white border-0 p-0 r-10px">
                             <div class="class-detail-cover-container">
                                 <img src="../images/img/class-detail-cover.png" class="class-cover-image r-top-10px"
-                                    alt="Cover image" />
+                                    alt="Cover" />
 
                                 <div class="cover-description">
                                     <div class="category-icon-container r-10px">
@@ -96,4 +96,4 @@ import { Link } from "react-router-dom";
     }
 }
 
-export default Class_Details
+export default ClassDetails

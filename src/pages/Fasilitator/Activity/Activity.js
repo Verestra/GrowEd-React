@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-import Mobile_Nav from '../../../components/Mobile-Nav';
-import Side_Menu from '../../../components/Side-Menu';
+import MobileNav from '../../../components/Mobile-Nav';
+import SideMenu from '../../../components/Side-Menu';
 import { Link } from "react-router-dom";
 
-class Activity_Fasilitator extends Component {
+class ActivityFasilitator extends Component {
     render() {
         return (
             <>
-            <Mobile_Nav />
+            <MobileNav />
             <div class="dashboard-container">
-                <Side_Menu />
+                <SideMenu />
                 <div id="main-content" class="bg-transparent p-3 d-flex flex-column justify-content-start">
                     <h1 class="">Activity</h1>
                     <div class="card bg-transparent border-0 p-0">
@@ -34,12 +34,12 @@ class Activity_Fasilitator extends Component {
                                     <tbody>
                                         <tr>
                                             <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td height="50px">Front-end fundamentals</td>
+                                            <td height="50px"><Link to="./Class-Details" className="text-link">Front-end fundamentals </Link></td>
                                             <td>Software</td>
                                             <td>Learn the fundamentals of front...</td>
                                             <td>Friday, 08:00 - 09:40</td>
-                                            <td align="center">24 <img src="../images/icons/toga-icon.png" /></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" class="" alt="" />
+                                            <td align="center">24 <img src="../images/icons/toga-icon.png" alt="student icon"/></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="list icon" />
                                             </td>
                                         </tr>
         
@@ -49,8 +49,8 @@ class Activity_Fasilitator extends Component {
                                             <td>Software</td>
                                             <td>HTML from scratch</td>
                                             <td>Monday, 13:00 - 14:40</td>
-                                            <td align="center">32 <img src="../images/icons/toga-icon.png" /></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" class="" alt="" /></td>
+                                            <td align="center">32 <img src="../images/icons/toga-icon.png" alt="student icon"/></td>
+                                            <td><img src="../images/icons/list-icon.svg" class="" alt="list icon" /></td>
                                         </tr>
         
                                         <tr>
@@ -59,15 +59,15 @@ class Activity_Fasilitator extends Component {
                                             <td>History</td>
                                             <td>The history of Europe concerns itself...</td>
                                             <td>Monday, 15:00 - 16:40</td>
-                                            <td align="center">17 <img src="../images/icons/toga-icon.png" /></td>
-                                            <td scope="col"><img src="../images/icons/list-icon.svg" class="" alt="" />
+                                            <td align="center">17 <img src="../images/icons/toga-icon.png" alt="student icon"/></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="list icon" />
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div class="d-flex align-items-center justify-content-center">
                                     <Link to="./My-Class" class="view-all cursor-pointer">view all
-                                        <img src="../images/icons/forward-icon.svg" width="12" height="12" alt="" /></Link>
+                                        <img src="../images/icons/forward-icon.svg" width="12" height="12" alt="icon" /></Link>
                                 </div>
                             </div>
                         </div>
@@ -81,4 +81,4 @@ class Activity_Fasilitator extends Component {
     }
 }
 
-export default Activity_Fasilitator
+export default ActivityFasilitator

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Chat_Pages extends Component {
+class ChatPages extends Component {
     render() {
         return (
             <>
@@ -160,5 +160,5 @@ class Chat_Pages extends Component {
     }
 }
 
-export default Chat_Pages
+export default ChatPages
 

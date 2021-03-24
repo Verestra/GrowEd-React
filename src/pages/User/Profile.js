@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import Mobile_Nav from '../../components/Mobile-Nav';
-import Side_Menu from '../../components/Side-Menu';
-import { Link } from "react-router-dom";
+import MobileNav from '../../components/Mobile-Nav';
+import SideMenu from '../../components/Side-Menu';
 
 export class Profile extends Component {
     render() {
         return (
             <>
-            <Mobile_Nav />
+            <MobileNav />
             <div class="dashboard-container">
-                <Side_Menu />
+                <SideMenu />
                 <div id="main-content">
                     <div class="image-cover-container">
                         <img src="../images/img/profile-background.png" alt="Profile Background" class="image-cover" />
                         <div class="avatar-lg">
                             <div class="d-flex">
-                                <img src="../images/photo-profile/profile-picture.png" class="avatar-image-lg" alt="Avatar Image" />
+                                <img src="../images/photo-profile/profile-picture.png" class="avatar-image-lg" alt="Avatar" />
                                 <img src="../images/icons/edit-icon.svg" class="edit-avatar" alt="Edit Icon" />
                             </div>
                             <span>Emir Kharisma</span>
