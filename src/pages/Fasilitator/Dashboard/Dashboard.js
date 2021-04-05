@@ -20,9 +20,9 @@ class DashboardFasilitator extends Component {
                             <div className="news-image-container">
                                 <img className="w-100" src="../images/img/news-image-1.jpg" alt="microsoft" />
                                 <div className="carousel-indicators">
-                                    <button className="active" type="button"></button>
+                                    {/* <button className="active" type="button"></button>
                                     <button type="button"></button>
-                                    <button type="button"></button>
+                                    <button type="button"></button> */}
                                 </div>
                             </div>
                         </div>

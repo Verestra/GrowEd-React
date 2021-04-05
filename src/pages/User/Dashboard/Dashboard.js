@@ -4,6 +4,7 @@ import SideMenu from '../../../components/Side-Menu';
 import Chat from '../../../components/Chat';
 import { Link } from "react-router-dom";
 
+
 class AllSchedule extends Component {
     render() {
         return (
@@ -17,9 +18,9 @@ class AllSchedule extends Component {
                             <div className="news-image-container">
                                 <img className="w-100" src="../images/img/news-image-1.jpg" alt="" />
                                 <div className="carousel-indicators">
-                                    <button className="active" type="button"></button>
+                                    {/* <button className="active" type="button"></button>
                                     <button type="button"></button>
-                                    <button type="button"></button>
+                                    <button type="button"></button> */}
                                 </div>
                             </div>
                         </div>

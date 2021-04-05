@@ -43,6 +43,13 @@ body {
 .text-color-2 {
   color: rgba(173, 169, 187, 1);
 }
+.text-color-3 {
+  font-size: 16px;
+  color: rgba(249,249,249,1);
+}
+.notif-text {
+  font-size: 31.5294px;
+}
 
 .table-style {
   border-collapse: separate;
@@ -579,6 +586,7 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  z-index: -10
 }
 
 .dashboard-container

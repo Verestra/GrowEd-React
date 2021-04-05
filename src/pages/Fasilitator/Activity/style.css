@@ -1,0 +1,51 @@
+.form-activity {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-activity .form-side {
+    display: flex;
+    flex-direction: column;
+  }
+
+.form-activity .form-row {
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-activity .activity-input {
+    outline: none;
+    border: none;
+  }
+
+.card .form-activity select {
+    background: white;
+    height: 1.25rem;
+    border: 1px solid black;
+}
+
+.btn-register {
+    background: rgba(87,186,97,1);
+}
+.card .form-activity textarea {
+    background: rgba(235, 235, 235, 1);
+  }
+
+.card .form-activity .button-create-class {
+    margin-left: 76%;
+    width: 20%;
+}
+  
+.card .form-activity .button-create-class .create-class {
+    width: 100%;
+  }
+
+  .card .member-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }

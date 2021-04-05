@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
+import Notifications from './Notification'
 
 
 class SideMenu extends Component {
     render() {
         return (
+           
                 <aside className="bg-white">
                 <div className="notification">
-                    <img className="cursor-pointer" align="right" src="../images/icons/notification-icon-black.svg" alt="" />
+                    <Notifications />
                 </div>
                 
                 <Link to="./Profile" className="avatar-container cursor-pointer text-link">
