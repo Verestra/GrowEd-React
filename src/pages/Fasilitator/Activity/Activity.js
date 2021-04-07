@@ -152,6 +152,7 @@ class ActivityFasilitator extends Component {
                                                         onChange={this.handleChange}
                                                         className={"activity-input w-50"}
                                                         placeholder={"Input Class Name"}
+                                                        required
                                                     />
                                                 </div>
 
@@ -184,6 +185,7 @@ class ActivityFasilitator extends Component {
                                                             type="number"
                                                             name="class_price"
                                                             onChange={this.handleChange}
+                                                            required
                                                         />
                                                     </div>
                                                 </div>
@@ -199,6 +201,7 @@ class ActivityFasilitator extends Component {
                                                             placeholder={"00:00"}
                                                             name="start_time"
                                                             onChange={this.handleChange}
+                                                            required
                                                         />
                                                         <input
                                                             type="text"
@@ -206,6 +209,7 @@ class ActivityFasilitator extends Component {
                                                             placeholder={"00:00"}
                                                             name="finish_time"
                                                             onChange={this.handleChange}
+                                                            required
                                                         />
                                                     </div>
                                                 </div>
@@ -218,6 +222,7 @@ class ActivityFasilitator extends Component {
                                             cols="30"
                                             rows="10"
                                             onChange={this.handleChange}
+                                            required
                                         ></textarea>
                                         <div className="button-create-class">
                                             <button type="submit" className={"btn btn-register my-1 create-class"}>
