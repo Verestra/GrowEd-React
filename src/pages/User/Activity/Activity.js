@@ -1,12 +1,27 @@
-import React, { Component } from 'react';
+import React, {useEffect, useRef} from 'react';
 import MobileNav from '../../../components/Mobile-Nav';
 import SideMenu from '../../../components/Side-Menu';
 import { Link } from "react-router-dom";
 // import Courses from '../../../assets/data/courses.json';
+import { connect } from "react-redux";
+import { getMyClassPaginated } from "../../../Redux/ActionCreators/GetMyClass"
+import { getAllCoursesPaginated} from "../../../Redux/ActionCreators/GetAllCourses"
 
-
-class Activity extends Component {
-    render() {
+function Activity(props) {
+    const {
+        getMyClassReducer,
+        getMyClass,
+        getAllCoursesReducer,
+        getAllCourses,
+    } = props
+    const getRef = useRef();
+    useEffect(() => {
+        if (!getRef.current) {
+            getMyClass();
+            getAllCourses();
+            getRef.current = true;
+        }
+    })
         return (
             <>
             <MobileNav />
@@ -34,11 +49,17 @@ class Activity extends Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                    {getMyClassReducer.isPending ? (
+                                <div> Loading... </div>
+                            ) : (
+                                <>      
+                                    {getMyClassReducer.isFulfilled
+                                        ? getMyClassReducer.results.map((my) => (
+                                            <tr>
                                             <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>Front-end fundamentals</td>
-                                            <td>Software</td>
-                                            <td>Learn the fundamentals of front...</td>
+                                            <td key={my.id_courses}>{my.class_name}</td>
+                                            <td key={my.id_courses}>{my.category_name}</td>
+                                            <td key={my.id_courses} class="text-table">{my.description}</td>
                                             <td>
                                                 <div class="c100 p80 small">
                                                     <span>80%</span>
@@ -50,50 +71,14 @@ class Activity extends Component {
                                             </td>
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
-                                            <td><span class="good-score">86</span></td>
+                                            <td><span class="good-score"> 89</span></td>
                                             <td><img src="../images/icons/list-icon.svg" alt="list"/>
                                             </td>
                                         </tr>
-        
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>HTML for Beginners</td>
-                                            <td>Software</td>
-                                            <td>HTML from scratch</td>
-                                            <td>
-                                                <div class="c100 p25 small">
-                                                    <span>25%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span> </td>
-                                            <td><span class="good-score">71</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="list"/>
-                                            </td>
-                                        </tr>
-        
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>History of Europe</td>
-                                            <td>History</td>
-                                            <td>The history of Europe concerns itself...</td>
-                                            <td>
-                                                <div class="c100 p69 small">
-                                                    <span>69%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span> </td>
-                                            <td><span class="medium-score">62</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="list" />
-                                            </td>
-                                        </tr>
+                                        ))
+                                        : null}
+                                </>
+                            )}
                                     </tbody>
                                 </table>
                                 <div class="d-flex align-items-center justify-content-center">
@@ -139,21 +124,30 @@ class Activity extends Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
-                                        <tr class="cursor-pointer">
-                                            <td><Link to="Class-Detail" className="text-link">Know more Javascript</Link> </td>
-                                            <td>Software</td>
-                                            <td>Javascript from the basic for...</td>
-                                            <td>Beginner</td>
-                                            <td>Free</td>
+                                    {getAllCoursesReducer.isPending ? (
+                                <div> Loading... </div>
+                            ) : (
+                                <>      
+                                    {getAllCoursesReducer.isFulfilled
+                                        ? getAllCoursesReducer.results.map((my) => (
+                                            <tr class="cursor-pointer">
+                                            <td><Link to="Class-Detail" className="text-link" key={my.id_courses}>{my.class_name}</Link> </td>
+                                            <td key={my.id_courses}>{my.category_name}</td>
+                                            <td key={my.id_courses}  class="text-table">{my.description}</td>
+                                            <td key={my.id_courses}>{my.level_name}</td>
+                                            <td key={my.id_courses}>{my.class_price}$</td>
                                             <td><span class="badge btn-success r-15px">Register</span> </td>
                                             <td><img src="../images/icons/list-icon.svg" alt="list"/></td>
                                         </tr>
+                                        ))
+                                        : null}
+                                </>
+                            )}
                                     </tbody>
                                 </table>
                             </div>
                             <div class="col-12 pagination-container d-flex flex-row justify-content-between align-items-center">
-                                <span class="w-100">Showing 10 out of 64</span>
+                            {getAllCoursesReducer.isFulfilled ? <span class="w-100">Showing 10 out of {getAllCoursesReducer.info.count} </span> : <span class="w-100">Showing 0 </span> }
                                 <div class="d-flex flex-row justify-content-evenly">
                                     <div class="table-page "><img class="rotate-180" src="../images/icons/forward-icon.svg" alt="next"/>
                                     </div>
@@ -172,7 +166,28 @@ class Activity extends Component {
         </div>
         </>
         )
-    }
 }
 
-export default Activity
+const mapStateToProps = (state) => {
+    const { getMyClassReducer, getAllCoursesReducer } = state;
+    return {
+        getMyClassReducer,
+        getAllCoursesReducer
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getMyClass: () =>
+            dispatch(
+                getMyClassPaginated("http://localhost:8000/courses/api/myClass/?page=1&limit=3")
+            ),
+        getAllCourses: () =>
+            dispatch(
+                getAllCoursesPaginated("http://localhost:8000/courses/api/all?search=&sort=&page=1&limit=10")
+            ),
+    };
+};
+const ConnectedActivity = connect(mapStateToProps, mapDispatchToProps)(Activity);
+
+export default ConnectedActivity

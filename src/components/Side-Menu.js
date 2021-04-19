@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 import Notifications from './Notification'
 
-
+function logoutClear(){
+    return localStorage.clear("token");
+}
 class SideMenu extends Component {
     render() {
         return (
@@ -36,7 +38,7 @@ class SideMenu extends Component {
                         <img src="../images/icons/help-icon.svg" alt="help" />
                         Help
                     </Link>
-                    <Link to="/" className="side-link cursor-pointer text-link">
+                    <Link to="/" onClick={logoutClear} className="side-link cursor-pointer text-link">
                         <img src="../images/icons/logout-icon.svg" className="menu-icon text-danger" alt="Logout Icon" />
                         <span className="text-danger">Logout</span>
                     </Link>

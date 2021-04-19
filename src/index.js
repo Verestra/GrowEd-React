@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './assets/css/style.css';
 import './assets/css/circle.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Provider } from "react-redux";
 
 
 import Login from './pages/Login';
@@ -22,6 +23,7 @@ import DashboardFasilitator from './pages/Fasilitator/Dashboard/Dashboard';
 import ActivityFasilitator from './pages/Fasilitator/Activity/Activity';
 import ClassDetails from './pages/Fasilitator/Activity/Class-Details';
 import Member from './pages/Fasilitator/Activity/Member';
+import reduxStore from "./Redux/Store";
 
 const AppWithRouter = () => {
   return (
@@ -41,7 +43,7 @@ const AppWithRouter = () => {
       <Route path="/User/Activity" component={Activity} />
       <Route path="/User/My-Class" component={MyClass} />
       <Route path="/User/Class-Progress" component={ClassProgress} />
-      <Route path="/User/Class-Detail" component={ClassDetail} />
+      <Route path="/User/Class-Detail/" component={ClassDetail} />
       <Route path="/Fasilitator/Dashboard" exact component={DashboardFasilitator} />
       <Route path="/Fasilitator/Activity" exact component={ActivityFasilitator} />
       <Route path="/Fasilitator/Class-Details" exact component={ClassDetails} />
@@ -55,7 +57,9 @@ const AppWithRouter = () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppWithRouter />
+    <Provider store={reduxStore}>
+      <AppWithRouter />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

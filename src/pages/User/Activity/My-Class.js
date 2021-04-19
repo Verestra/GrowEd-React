@@ -1,10 +1,21 @@
-import React, { Component } from 'react';
+import React, { useEffect, useRef} from 'react';
 import MobileNav from '../../../components/Mobile-Nav';
 import SideMenu from '../../../components/Side-Menu';
 import { Link } from "react-router-dom";
-
-class MyClass extends Component {
-    render() {
+import { connect } from "react-redux";
+import { getMyClassPaginated } from "../../../Redux/ActionCreators/GetMyClass"
+function MyClass(props) {
+    const {
+        getMyClassReducer,
+        getMyClass,
+    } = props
+    const getRef = useRef();
+    useEffect(() => {
+        if (!getRef.current) {
+            getMyClass();
+            getRef.current = true;
+        }
+    })
         return (
             <>
                 <MobileNav />
@@ -54,11 +65,17 @@ class MyClass extends Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                    {getMyClassReducer.isPending ? (
+                                <div> Loading... </div>
+                            ) : (
+                                <>      
+                                    {getMyClassReducer.isFulfilled
+                                        ? getMyClassReducer.results.map((my) => (
+                                            <tr>
                                             <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>Front-end fundamentals</td>
-                                            <td>Software</td>
-                                            <td>Learn the fundamentals of front...</td>
+                                            <td key={my.id_courses}>{my.class_name}</td>
+                                            <td key={my.id_courses}>{my.category_name}</td>
+                                            <td key={my.id_courses} class="text-table">{my.description}</td>
                                             <td>
                                                 <div class="c100 p80 small">
                                                     <span>80%</span>
@@ -70,190 +87,14 @@ class MyClass extends Component {
                                             </td>
                                             <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
                                             </td>
-                                            <td><span class="good-score">86</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" />
+                                            <td><span class="good-score"> 89</span></td>
+                                            <td><img src="../images/icons/list-icon.svg" alt="list"/>
                                             </td>
                                         </tr>
-
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>HTML for Beginners</td>
-                                            <td>Software</td>
-                                            <td>HTML from scratch</td>
-                                            <td>
-                                                <div class="c100 p25 small">
-                                                    <span>25%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
-                                            </td>
-                                            <td><span class="good-score">71</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>History of Europe</td>
-                                            <td>History</td>
-                                            <td>The history of Europe concerns itself...</td>
-                                            <td>
-                                                <div class="c100 p69 small">
-                                                    <span>69%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
-                                            </td>
-                                            <td><span class="medium-score">62</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" /></th>
-                                            <td>Trigonometry</td>
-                                            <td>Math</td>
-                                            <td>Trigonometry help u find angles</td>
-                                            <td>
-                                                <div class="c100 p25 small">
-                                                    <span>25%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
-                                            </td>
-                                            <td><span class="good-score">71</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" checked /></th>
-                                            <td>Algebra</td>
-                                            <td>Math</td>
-                                            <td>Branch of mathematics dealing with...</td>
-                                            <td>
-                                                <div class="c100 p100 small">
-                                                    <span>100%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Completed</span>
-                                            </td>
-                                            <td><span class="complete-score">100</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>Molecular Biology</td>
-                                            <td>Science</td>
-                                            <td>Study the composition, structure...</td>
-                                            <td>
-                                                <div class="c100 p80 small">
-                                                    <span>80%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
-                                            </td>
-                                            <td><span class="low-score">42</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>Banking Finance</td>
-                                            <td>Finance</td>
-                                            <td>Explore the dynamic, fast-paced...</td>
-                                            <td>
-                                                <div class="c100 p10 small">
-                                                    <span>10%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Ongoing</span>
-                                            </td>
-                                            <td><span class="veryLow-score">21</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>Basic Excel</td>
-                                            <td>Software</td>
-                                            <td>Learn Excel from beginner to...</td>
-                                            <td>
-                                                <div class="c100 p100 small">
-                                                    <span>100%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Completed</span>
-                                            </td>
-                                            <td><span class="complete-score">98</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>Thermodynamics and<br /> Phase Equilibria</td>
-                                            <td>Science</td>
-                                            <td>Learn Thermodynamics and how to...</td>
-                                            <td>
-                                                <div class="c100 p100 small">
-                                                    <span>100%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Completed</span>
-                                            </td>
-                                            <td><span class="good-score">86</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                            <td>Ancient Egypt and its <br /> Civilization</td>
-                                            <td>History</td>
-                                            <td>Colossal pyramids imposing temples...</td>
-                                            <td>
-                                                <div class="c100 p100 small">
-                                                    <span>100%</span>
-                                                    <div class="slice">
-                                                        <div class="bar"></div>
-                                                        <div class="fill"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge badge-ongoing p-2 r-15px">Completed</span>
-                                            </td>
-                                            <td><span class="medium-score">72</span></td>
-                                            <td><img src="../images/icons/list-icon.svg" alt="" /></td>
-                                        </tr>
+                                        ))
+                                        : null}
+                                </>
+                            )}
                                     </tbody>
                                 </table>
                             </div>
@@ -277,7 +118,24 @@ class MyClass extends Component {
                 </div>
             </>
         )
-    }
+    
 }
 
-export default MyClass
+const mapStateToProps = (state) => {
+    const { getMyClassReducer } = state;
+    return {
+        getMyClassReducer,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getMyClass: () =>
+            dispatch(
+                getMyClassPaginated("http://localhost:8000/courses/api/myClass/?page=1&limit=10")
+            ),
+    };
+};
+const ConnectedMyClass = connect(mapStateToProps, mapDispatchToProps)(MyClass);
+
+export default ConnectedMyClass

@@ -65,6 +65,15 @@ body {
   text-decoration: inherit;
 }
 
+.text-table {
+  display:inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  max-width: 30ch;
+}
+
 .complete-course {
   color: rgba(151,151,151,1);
 }

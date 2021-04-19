@@ -23,23 +23,13 @@ class App extends Component {
             userNameOrEmail: userNameOrEmail,
             password: password,
         };
-        // console.log(body);
-        // const config = {
-        //     headers: {
-        //         "origin"
-        //     }
-        // }
+
         Axios
             .post("http://localhost:8000/users/api/auth/login", body)
             .then((result) => {
-                alert("Login Succes");
-                if (result.data.success) {
-                    result.data.data[0].role_id === 1
-                    ? this.props.history.push ('/User/Dashboard')
-                    :
-                    this.props.history.push('/Fasilitator/Dashboard')
-                }
-                console.log(result.data.data[0].role_id);
+                console.log(result.data.data.token)
+                localStorage.setItem("token", "Bearer " + result.data.data.token)
+                
                 this.setState({
                     userNameOrEmail: "",
                     password: ""
@@ -51,7 +41,9 @@ class App extends Component {
             });
     };
 
-
+componentDidMount() {
+    console.log(localStorage.getItem("token"))
+}
     render() {
         return (
             <>
@@ -61,7 +53,7 @@ class App extends Component {
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <label for="userName" className="form-head">userName or Email</label>
-                                <input type="email" className="form-control" name="userNameOrEmail" onChange={this.handleChange} />
+                                <input type="text" className="form-control" name="userNameOrEmail" onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
                                 <div className="password-container">
@@ -83,7 +75,6 @@ class App extends Component {
                             </div>
                         </form>
                     </div>
-
                 </div>
             </>
         )
