@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component }from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/style.css';
 import './assets/css/circle.css';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
 
@@ -24,35 +24,125 @@ import ActivityFasilitator from './pages/Fasilitator/Activity/Activity';
 import ClassDetails from './pages/Fasilitator/Activity/Class-Details';
 import Member from './pages/Fasilitator/Activity/Member';
 import reduxStore from "./Redux/Store";
+import PrivateRoute from './components/PrivateRoute'
+import PrivateRouteAuth from './components/PrivateRouteAuth'
 
-const AppWithRouter = () => {
+class AppWithRouter extends Component {
+  
+  state = {
+    token : localStorage.getItem("token"),
+  };
+
+  
+  
+  render() {
+    const token = this.state
+    console.log(token)
+    console.log(token.token === null)
   return (
     <Router>
+      <Switch>
+        <PrivateRoute
+          path="/User/Dashboard"
+          token={token}
+          Component={AllSchedule}
+        />
+        <PrivateRoute
+          path="/User/Profile"
+          token={token}
+          Component={Profile}
+        />
+        <PrivateRoute
+          path="/User/For-You"
+          token={token}
+          Component={ForYou}
+        />
+        <PrivateRoute
+          path="/User/Activity"
+          token={token}
+          Component={Activity}
+        />
+        <PrivateRoute
+          path="/User/My-Class"
+          token={token}
+          Component={MyClass}
+        />
+        <PrivateRoute
+          path="/User/Class-Progress"
+          token={token}
+          Component={ClassProgress}
+        />
+        <PrivateRoute
+          path="/User/Class-Detail"
+          token={token}
+          Component={ClassDetail}
+        />
+        <PrivateRoute
+          path="/User/Dashboard"
+          token={token}
+          Component={AllSchedule}
+        />
+         <PrivateRoute
+          path="/Fasilitator/Dashboard"
+          token={token}
+          Component={DashboardFasilitator}
+        />
+        <PrivateRoute
+          path="/Fasilitator/Activity"
+          token={token}
+          Component={ActivityFasilitator}
+        />
+        <PrivateRoute
+          path="/Fasilitator/Class-Details"
+          token={token}
+          Component={ClassDetails}
+        />
+        <PrivateRoute
+          path="/Fasilitator/Member"
+          token={token}
+          Component={Member}
+        />
+        <PrivateRouteAuth
+          path="/"
+          token={token}
+          Component={Login}
+        />
+         <PrivateRouteAuth
+          path="/Reset-Password"
+          token={token}
+          Component={ResetPassword}
+        />
+         <PrivateRouteAuth
+          path="/Reset-Password-Otp"
+          token={token}
+          Component={ResetPasswordOtp}
+        />
+         <PrivateRouteAuth
+          path="/Reset-Password-New"
+          token={token}
+          Component={ResetPasswordNew}
+        />
+         <PrivateRouteAuth
+          path="/Register"
+          token={token}
+          Component={Register}
+        />
+      </Switch>
       {/* Deklarasi Komponen, Load CSS */}
       {/* domain/main/dashboard state.address = dashboard */}
       {/* domain/v1/activity state.address = activity */}
       {/* domain/ => menampilkan App.js*/}
-      <Route path="/" exact component={Login} />
+      {/* <Route path="/" exact component={Login} />
       <Route path="/Reset-Password" component={ResetPassword} />
-      <Route path="/Reset-Password-Otp" component={ResetPasswordOtp} />  
-      <Route path="/Reset-Password-New" component={ResetPasswordNew} />
-      <Route path="/Register" exact component={Register} />
-      <Route path="/User/Profile" component={Profile} />
-      <Route path="/User/Dashboard" exact component={AllSchedule} />
-      <Route path="/User/For-You" component={ForYou} />
-      <Route path="/User/Activity" component={Activity} />
-      <Route path="/User/My-Class" component={MyClass} />
-      <Route path="/User/Class-Progress" component={ClassProgress} />
-      <Route path="/User/Class-Detail/" component={ClassDetail} />
-      <Route path="/Fasilitator/Dashboard" exact component={DashboardFasilitator} />
-      <Route path="/Fasilitator/Activity" exact component={ActivityFasilitator} />
-      <Route path="/Fasilitator/Class-Details" exact component={ClassDetails} />
-      <Route path="/Fasilitator/Member" exact component={Member} />
+      <Route path="/Reset-Password-Otp" component={ResetPasswordOtp} />   */}
+      {/* <Route path="/Reset-Password-New" component={ResetPasswordNew} /> */}
+      {/* <Route path="/Register" exact component={Register} /> */}
       <Route path="/Chat-Pages" component={ChatPages} />
       {/* domain/demo => menampilkan DemoHtml.js */}
       {/* <Route path="/all-schedule" component={All-Schedule} /> */}
     </Router>
   );
+}
 };
 
 ReactDOM.render(

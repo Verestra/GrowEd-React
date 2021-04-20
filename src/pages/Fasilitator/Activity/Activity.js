@@ -115,32 +115,32 @@ class ActivityFasilitator extends Component {
                                         <tbody>
                                             <tr>
                                                 <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                                <td height="50px"><Link to="./Class-Details" className="text-link">Front-end fundamentals </Link></td>
+                                                <td height="50px"><Link to="./Class-Details" className="text-link">Learn C# </Link></td>
                                                 <td>Software</td>
-                                                <td>Learn the fundamentals of front...</td>
+                                                <td>Learn the fundamentals of C#</td>
                                                 <td>Friday, 08:00 - 09:40</td>
-                                                <td align="center">24 <img src="../images/icons/toga-icon.png" alt="student icon" /></td>
+                                                <td align="center">1 <img src="../images/icons/toga-icon.png" alt="student icon" /></td>
                                                 <td><img src="../images/icons/list-icon.svg" alt="list icon" />
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                                <td height="50px">HTML for Beginners</td>
+                                                <td height="50px">Learn C</td>
                                                 <td>Software</td>
-                                                <td>HTML from scratch</td>
+                                                <td>Learn the newest C</td>
                                                 <td>Monday, 13:00 - 14:40</td>
-                                                <td align="center">32 <img src="../images/icons/toga-icon.png" alt="student icon" /></td>
+                                                <td align="center">0 <img src="../images/icons/toga-icon.png" alt="student icon" /></td>
                                                 <td><img src="../images/icons/list-icon.svg" class="" alt="list icon" /></td>
                                             </tr>
 
                                             <tr>
                                                 <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                                <td height="50px">History of Europe</td>
-                                                <td>History</td>
-                                                <td>The history of Europe concerns itself...</td>
+                                                <td height="50px">Learn PHP</td>
+                                                <td>Software</td>
+                                                <td>Learn PHP</td>
                                                 <td>Monday, 15:00 - 16:40</td>
-                                                <td align="center">17 <img src="../images/icons/toga-icon.png" alt="student icon" /></td>
+                                                <td align="center">0 <img src="../images/icons/toga-icon.png" alt="student icon" /></td>
                                                 <td><img src="../images/icons/list-icon.svg" alt="list icon" />
                                                 </td>
                                             </tr>

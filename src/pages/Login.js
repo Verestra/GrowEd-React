@@ -30,7 +30,9 @@ class App extends Component {
             .then((result) => {
                 console.log(result.data.success)
                 let token = result.data.data.token
+                console.log(token)
                 let decoded = jwt_decode(token)
+                console.log(decoded)
                 if (result.data.success) {
                     decoded.role_id === 1
                     ? this.props.history.push ('/User/Dashboard')
@@ -50,9 +52,7 @@ class App extends Component {
             });
     };
 
-componentDidMount() {
-    console.log(localStorage.getItem("token"))
-}
+
     render() {
         return (
             <>
