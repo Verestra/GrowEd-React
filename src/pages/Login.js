@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import Axios from "axios";
+import jwt_decode from "jwt-decode";
 
 class App extends Component {
     state = {
@@ -27,8 +28,16 @@ class App extends Component {
         Axios
             .post("http://localhost:8000/users/api/auth/login", body)
             .then((result) => {
-                console.log(result.data.data.token)
-                localStorage.setItem("token", "Bearer " + result.data.data.token)
+                console.log(result.data.success)
+                let token = result.data.data.token
+                let decoded = jwt_decode(token)
+                if (result.data.success) {
+                    decoded.role_id === 1
+                    ? this.props.history.push ('/User/Dashboard')
+                    :
+                    this.props.history.push('/Fasilitator/Dashboard')
+                }
+                localStorage.setItem("token", "Bearer " + token)
                 
                 this.setState({
                     userNameOrEmail: "",
@@ -36,7 +45,7 @@ class App extends Component {
                 });
             })
             .catch((err) => {
-                alert("Login Failed");
+                
                 console.error(err)
             });
     };
@@ -53,12 +62,12 @@ componentDidMount() {
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <label for="userName" className="form-head">userName or Email</label>
-                                <input type="text" className="form-control" name="userNameOrEmail" onChange={this.handleChange} />
+                                <input type="text" className="form-control" name="userNameOrEmail" onChange={this.handleChange} required/>
                             </div>
                             <div className="form-group">
                                 <div className="password-container">
                                     <label for="password" className="form-head">Password</label>
-                                    <input type="password" className="form-control" name="password" onChange={this.handleChange} />
+                                    <input type="password" className="form-control" name="password" onChange={this.handleChange} required/>
                                     <img src="images/icons/reveal-icon.svg" className="reveal-icon" alt="reveal" />
                                 </div>
                             </div>

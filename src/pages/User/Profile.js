@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import MobileNav from '../../components/Mobile-Nav';
 import SideMenu from '../../components/Side-Menu';
 
+
 export class Profile extends Component {
+
+
     render() {
         return (
+            
             <>
             <MobileNav />
             <div class="dashboard-container">
@@ -17,6 +21,7 @@ export class Profile extends Component {
                                 <img src="../images/photo-profile/profile-picture.png" class="avatar-image-lg" alt="Avatar" />
                                 <img src="../images/icons/edit-icon.svg" class="edit-avatar" alt="Edit Icon" />
                             </div>
+                        
                             <span>Emir Kharisma</span>
                         </div>
                     </div>

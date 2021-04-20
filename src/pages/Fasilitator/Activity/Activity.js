@@ -16,7 +16,8 @@ class ActivityFasilitator extends Component {
         class_price: 0,
         schedule: "2020-11-06",
         start_time: "",
-        finish_time: ""
+        finish_time: "",
+        image: null
     }
 
     handleChange = (e) => {
@@ -29,20 +30,35 @@ class ActivityFasilitator extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const { className, categoryId, description, level_id, class_price, schedule, start_time, finish_time } = this.state;
-        const body = {
-            className: className,
-            categoryId: Number(categoryId),
-            description: description,
-            level_id: Number(level_id),
-            class_price: Number(class_price),
-            schedule: schedule,
-            start_time: start_time,
-            finish_time: finish_time
-        };
+        const formData = new FormData();
+        
+        formData.append("classname", this.state.className)
+        formData.append("categoryId", this.state.categoryId)
+        formData.append("description", this.state.description)
+        formData.append("level_id", this.state.level_id)
+        formData.append("class_price", this.state.class_price)
+        formData.append("schedule", this.state.schedule)
+        formData.append("start_time", this.state.start_time)
+        formData.append("finish_time", this.state.finish_time)
+        formData.append(
+            "image", this.state.image
+        )
+        console.log(formData.getAll('classname'))
+        console.log(this.state.image)
+        // const body = {
+        //     className: this.state.className,
+        //     categoryId: this.statecategoryId,
+        //     description: this.state.description,
+        //     level_id: this.state.level_id,
+        //     class_price: this.state.class_price,
+        //     schedule: this.state.schedule,
+        //     start_time: this.state.start_time,
+        //     finish_time: this.state.finish_time,
+        //     image : this.state.image
+        // };
 
         Axios
-            .post("http://localhost:8000/courses/api/addClass", body)
+            .post("http://localhost:8000/courses/api/addClass", formData)
             .then((result) => {
                 alert("Add New Class Complete");
                 if (result.data.success) {
@@ -57,7 +73,8 @@ class ActivityFasilitator extends Component {
                     class_price: 0,
                     schedule: "",
                     start_time: "",
-                    finish_time: ""
+                    finish_time: "",
+                    image : null
                 });
             })
             .catch((err) => {
@@ -224,6 +241,7 @@ class ActivityFasilitator extends Component {
                                             onChange={this.handleChange}
                                             required
                                         ></textarea>
+                                        <input type="file" onChange={this.handleChange} name="image" />
                                         <div className="button-create-class">
                                             <button type="submit" className={"btn btn-register my-1 create-class"}>
                                                 <span className="text-color-3">Create </span>
