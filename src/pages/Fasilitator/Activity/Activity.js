@@ -32,7 +32,7 @@ class ActivityFasilitator extends Component {
         e.preventDefault();
         const formData = new FormData();
         
-        formData.append("classname", this.state.className)
+        formData.append("className", this.state.className)
         formData.append("categoryId", this.state.categoryId)
         formData.append("description", this.state.description)
         formData.append("level_id", this.state.level_id)
@@ -58,7 +58,9 @@ class ActivityFasilitator extends Component {
         // };
 
         Axios
-            .post("http://localhost:8000/courses/api/addClass", formData)
+            .post("http://localhost:8000/courses/api/addClass", formData, {
+                headers: { 'x-access-token' : localStorage.getItem("token")}
+            })
             .then((result) => {
                 alert("Add New Class Complete");
                 if (result.data.success) {

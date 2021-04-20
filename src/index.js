@@ -45,87 +45,87 @@ class AppWithRouter extends Component {
         <PrivateRoute
           path="/User/Dashboard"
           token={token}
-          Component={AllSchedule}
+          exact Component={AllSchedule}
         />
         <PrivateRoute
           path="/User/Profile"
           token={token}
-          Component={Profile}
+          exact Component={Profile}
         />
         <PrivateRoute
           path="/User/For-You"
           token={token}
-          Component={ForYou}
+          exact Component={ForYou}
         />
         <PrivateRoute
           path="/User/Activity"
           token={token}
-          Component={Activity}
+          exact Component={Activity}
         />
         <PrivateRoute
           path="/User/My-Class"
           token={token}
-          Component={MyClass}
+          exact Component={MyClass}
         />
         <PrivateRoute
           path="/User/Class-Progress"
           token={token}
-          Component={ClassProgress}
+          exact Component={ClassProgress}
         />
         <PrivateRoute
           path="/User/Class-Detail"
           token={token}
-          Component={ClassDetail}
+          exact Component={ClassDetail}
         />
         <PrivateRoute
           path="/User/Dashboard"
           token={token}
-          Component={AllSchedule}
+          exact Component={AllSchedule}
         />
          <PrivateRoute
           path="/Fasilitator/Dashboard"
           token={token}
-          Component={DashboardFasilitator}
+          exact Component={DashboardFasilitator}
         />
         <PrivateRoute
           path="/Fasilitator/Activity"
           token={token}
-          Component={ActivityFasilitator}
+          exact Component={ActivityFasilitator}
         />
         <PrivateRoute
           path="/Fasilitator/Class-Details"
           token={token}
-          Component={ClassDetails}
+          exact Component={ClassDetails}
         />
         <PrivateRoute
           path="/Fasilitator/Member"
           token={token}
-          Component={Member}
+          exact Component={Member}
         />
         <PrivateRouteAuth
           path="/"
           token={token}
-          Component={Login}
+          exact Component={Login}
         />
          <PrivateRouteAuth
           path="/Reset-Password"
           token={token}
-          Component={ResetPassword}
+          exact Component={ResetPassword}
         />
          <PrivateRouteAuth
           path="/Reset-Password-Otp"
           token={token}
-          Component={ResetPasswordOtp}
+          exact Component={ResetPasswordOtp}
         />
          <PrivateRouteAuth
           path="/Reset-Password-New"
           token={token}
-          Component={ResetPasswordNew}
+          exat Component={ResetPasswordNew}
         />
          <PrivateRouteAuth
           path="/Register"
           token={token}
-          Component={Register}
+          exact Component={Register}
         />
       </Switch>
       {/* Deklarasi Komponen, Load CSS */}

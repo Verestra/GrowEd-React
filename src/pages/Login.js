@@ -33,18 +33,18 @@ class App extends Component {
                 console.log(token)
                 let decoded = jwt_decode(token)
                 console.log(decoded)
+
+                this.setState({
+                    userNameOrEmail: "",
+                    password: ""
+                });
+                localStorage.setItem("token", "Bearer " + token)
                 if (result.data.success) {
                     decoded.role_id === 1
                     ? this.props.history.push ('/User/Dashboard')
                     :
                     this.props.history.push('/Fasilitator/Dashboard')
                 }
-                localStorage.setItem("token", "Bearer " + token)
-                
-                this.setState({
-                    userNameOrEmail: "",
-                    password: ""
-                });
             })
             .catch((err) => {
                 
