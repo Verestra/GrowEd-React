@@ -37,8 +37,8 @@ class AppWithRouter extends Component {
   
   render() {
     const token = this.state
-    console.log(token)
-    console.log(token.token === null)
+    // console.log(token)
+    // console.log(token.token === null)
   return (
     <Router>
       <Switch>

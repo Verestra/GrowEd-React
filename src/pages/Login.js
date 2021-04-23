@@ -41,9 +41,9 @@ class App extends Component {
                 localStorage.setItem("token", "Bearer " + token)
                 if (result.data.success) {
                     decoded.role_id === 1
-                    ? this.props.history.push ('/User/Dashboard')
+                    ? window.location.replace("/User/Dashboard")
                     :
-                    this.props.history.push('/Fasilitator/Dashboard')
+                    window.location.replace('/Fasilitator/Dashboard')
                 }
             })
             .catch((err) => {

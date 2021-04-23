@@ -126,4 +126,3 @@ const mapDispatchToProps = (dispatch) => {
 const ConnectedDashboardFasilitator = connect(mapStateToProps, mapDispatchToProps)(DashboardFasilitator);
 
 export default ConnectedDashboardFasilitator
-
